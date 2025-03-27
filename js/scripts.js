@@ -218,9 +218,10 @@ $(document).ready(function () {
             && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbyo0rEknln8LedEP3bkONsfOh776IR5lFidLhJFQ6jdvRiH4dKvHZmtoIybvnxpxYr2cA/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbxecAMFHsfMldPyFVuA7T9RHQkmNZ1Gp9xqChM4gCvhLuLAMhYYZQbPaD5dxAbI_Rd-Dg/exec', data)
                 .done(function (data) {
                     console.log(data);
+                    console.log("success");
                     if (data.result === "error") {
                         $('#alert-wrapper').html(alert_markup('danger', data.message));
                     } else {
@@ -230,6 +231,7 @@ $(document).ready(function () {
                 })
                 .fail(function (data) {
                     console.log(data);
+                    console.log("failure");
                     $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
                 });
         }
