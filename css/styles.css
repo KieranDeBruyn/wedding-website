@@ -1100,3 +1100,9 @@ body.modal-open {
         text-align: right;
     }
 }
+
+@media only screen and (max-width: 768px){
+    .leftcol{
+        text-align: left;
+    }
+}
