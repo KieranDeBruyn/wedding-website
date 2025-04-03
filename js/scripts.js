@@ -184,23 +184,23 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Ram and Antara's Wedding",
+            title: "Trouw Kieran en Eva",
 
             // Event start date
-            start: new Date('Nov 27, 2017 10:00'),
+            start: new Date('May 1, 2026 16:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Nov 29, 2017 00:00'),
+            end: new Date('May 2, 2026 00:00'),
 
             // Event Address
-            address: 'ITC Fortune Park Hotel, Kolkata',
+            address: 'Hove van Herpelgem, Avelgemstraat 6, 9690 Kluisbergen',
 
             // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."
+            description: "We kijken ernaar uit om jou te zien op onze dag! Als je met vragen zit, contacteer ons gerust!"
         }
     });
 
@@ -214,8 +214,8 @@ $(document).ready(function () {
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-        if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
-            && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
+        if (MD5($('#invite_code').val()) !== 'ac5d1e9c42c61563c35537e8009a577c'
+            && MD5($('#invite_code').val()) !== 'db561a9bd9ead6750145cb0dcf78271d') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
             $.post('https://script.google.com/macros/s/AKfycbxecAMFHsfMldPyFVuA7T9RHQkmNZ1Gp9xqChM4gCvhLuLAMhYYZQbPaD5dxAbI_Rd-Dg/exec', data)
