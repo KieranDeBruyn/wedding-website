@@ -38,7 +38,7 @@ $(document).ready(function () {
         offset: '75%'
     });
     $('.wp8').waypoint(function () {
-        $('.wp8').addClass('animated fadeInLeft');
+        $('.wp8').addClass('animated fadeInRight');
     }, {
         offset: '75%'
     });
