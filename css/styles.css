@@ -730,6 +730,7 @@ header .member-actions {
 .events .leftcol {
     padding-right: 100px;
     border-right: solid 1px #e6e9ea;
+    text-align: right;
 }
 
 .events .rightcol {
@@ -940,7 +941,7 @@ header .member-actions {
 
 #map-content-wrapper {
     position: relative;
-    margin-top: -502px;
+    margin-top: -547px;
     margin-bottom: 150px;
 }
 
@@ -1093,16 +1094,4 @@ body.modal-open {
 
 .modal-body {
     padding: 25px;
-}
-
-@media only screen and (min-width: 768px){
-    .leftcol{
-        text-align: right;
-    }
-}
-
-@media only screen and (max-width: 768px){
-    .leftcol{
-        text-align: left;
-    }
 }
