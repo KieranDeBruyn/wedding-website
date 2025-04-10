@@ -421,7 +421,7 @@
 
     <section class="rsvp text-center section-padding" id="rsvp">
 
-        <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div id="rsvp-modal-full" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -430,7 +430,22 @@
                         <div class="section-padding">
                             <h3>Dankjewel om te bevestigen!</h3>
                             <p>Leuk dat je erbij bent op onze dag. </p>
-                            <div id="add-to-cal"></div>
+                            <div id="add-to-cal-full"></div>
+                        </div>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <div id="rsvp-modal-part" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                        </button>
+                        <div class="section-padding">
+                            <h3>Dankjewel om te bevestigen!</h3>
+                            <p>Leuk dat je erbij bent op onze dag. </p>
+                            <div id="add-to-cal-part"></div>
                         </div>
                     </div>
                 </div><!-- /.modal-content -->
@@ -502,7 +517,7 @@
             <div class="row">
                 <div class="col-sm-12 text-center content">
                     <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
-                    <p>We zien jullie daar!</p>
+                    <p>We zien jullie daar! (Of eens in den draai)</p>
                 </div>
             </div>
         </div>

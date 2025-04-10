@@ -176,7 +176,7 @@ $(document).ready(function () {
     });
 
     /********************** Add to Calendar **********************/
-    var myCalendar = createCalendar({
+    var fullCalendar = createCalendar({
         options: {
             class: '',
             // You can pass an ID. If you don't, one will be generated for you
@@ -194,7 +194,7 @@ $(document).ready(function () {
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('May 2, 2026 00:00'),
+            end: new Date('May 2, 2026 03:30'),
 
             // Event Address
             address: 'Hove van Herpelgem, Avelgemstraat 6, 9690 Kluisbergen',
@@ -204,7 +204,37 @@ $(document).ready(function () {
         }
     });
 
-    $('#add-to-cal').html(myCalendar);
+    var partCalendar = createCalendar({
+        options: {
+            class: '',
+            // You can pass an ID. If you don't, one will be generated for you
+            id: ''
+        },
+        data: {
+            // Event title
+            title: "Trouw Kieran en Eva",
+
+            // Event start date
+            start: new Date('May 1, 2026 22:00'),
+
+            // Event duration (IN MINUTES)
+            // duration: 120,
+
+            // You can also choose to set an end time
+            // If an end time is set, this will take precedence over duration
+            end: new Date('May 2, 2026 03:30'),
+
+            // Event Address
+            address: 'Hove van Herpelgem, Avelgemstraat 6, 9690 Kluisbergen',
+
+            // Event Description
+            description: "We kijken ernaar uit om jou te zien op onze dag! Als je met vragen zit, contacteer ons gerust!"
+        }
+    });
+
+    $('#add-to-cal-full').html(fullCalendar);
+
+    $('#add-to-cal-part').html(partCalendar);
 
 
     /********************** RSVP **********************/
@@ -224,9 +254,12 @@ $(document).ready(function () {
                     console.log("success");
                     if (data.result === "error") {
                         $('#alert-wrapper').html(alert_markup('danger', data.message));
+                    } else if(MD5($('#invite_code').val()) == 'ac5d1e9c42c61563c35537e8009a577c') {
+                        $('#alert-wrapper').html('');
+                        $('#rsvp-modal-full').modal('show');
                     } else {
                         $('#alert-wrapper').html('');
-                        $('#rsvp-modal').modal('show');
+                        $('#rsvp-modal-part').modal('show');
                     }
                 })
                 .fail(function (data) {
