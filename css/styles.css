@@ -467,7 +467,7 @@ section .header {
 }
 
 .hero .hero-content {
-    padding-top: 40%
+    padding-top: 600px
 }
 
 .hero .hero-content img {
@@ -925,6 +925,11 @@ header .member-actions {
     opacity: 1;
     z-index: 9;
 }
+
+#eng-pics .col-xs-6,
+#eng-pics .col-sm-4 {
+    padding: 15px;
+ } 
 
 #eng-pics .diamond {
     width: 230px;

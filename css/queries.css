@@ -1,6 +1,6 @@
 @media screen and (max-width: 1200px) {
     header {
-        width: 90%;
+        width: 600px;
         margin: 0 auto;
     }
 
@@ -13,7 +13,7 @@
 
 @media screen and (max-width: 1024px) {
     .hero .hero-content {
-        padding-top: 50%;
+        padding-top: 600px;
     }
 }
 
@@ -25,7 +25,7 @@
     }
 
     .hero .hero-content {
-        padding-top: 50%;
+        padding-top: 600px;
     }
 
     .header-nav {
@@ -258,7 +258,11 @@
 
 @media screen and (max-width: 640px) {
     .hero .hero-content {
-        padding-top: 100%;
+        padding-top: 600px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
     }
 
     #eng-pics .img-wrap i {
@@ -297,7 +301,7 @@
 
 @media screen and (max-width: 480px) {
     .hero .hero-content {
-        padding-top: 110%;
+        padding-top: 600px;
     }
     
     .hero .hero-content img {
@@ -315,7 +319,7 @@
     }
 
     .hero h1 {
-        font-size: 50px;
+        font-size: 30px;
     }
 
     .btn-margin-right {
@@ -361,7 +365,7 @@
 
 @media screen and (max-width: 320px) {
     .hero .hero-content {
-        padding-top: 130%;
+        padding-top: 600px;
     }
 
     .rsvp {
