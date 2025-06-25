@@ -238,10 +238,76 @@ $(document).ready(function () {
 
 
     /********************** RSVP **********************/
+    var partners = 0;
     $('#partner-btn').click(function () {
+        if (partners < 4){
+            partners++;
+            if (partners == 1){
+                $('#toggle-partner-name').toggleClass('toggle-partner-rsvp');
+                $('#toggle-partner-diet').toggleClass('toggle-partner-rsvp');
+                $('#remove-partner-btn').toggleClass('toggle-partner-rsvp');
+            }
+            if (partners == 2){
+                $('#toggle-partner2-name').toggleClass('toggle-partner-rsvp');
+                $('#toggle-partner2-diet').toggleClass('toggle-partner-rsvp');
+                $('#remove-partner2-btn').toggleClass('toggle-partner-rsvp');
+            }
+            if (partners == 3){
+                $('#toggle-partner3-name').toggleClass('toggle-partner-rsvp');
+                $('#toggle-partner3-diet').toggleClass('toggle-partner-rsvp');
+                $('#remove-partner3-btn').toggleClass('toggle-partner-rsvp');
+            }
+            if (partners == 4){
+                $('#toggle-partner4-name').toggleClass('toggle-partner-rsvp');
+                $('#toggle-partner4-diet').toggleClass('toggle-partner-rsvp');
+                $('#remove-partner4-btn').toggleClass('toggle-partner-rsvp');
+            }
+        }
+        if (partners > 0){
+            $('#rsvp-btn').html("Dat zijn wij!");
+        } else {
+            $('#rsvp-btn').html("Dat ben ik!");
+        }
+    });
+    $('#remove-partner-btn').click(function () {
         $('#toggle-partner-name').toggleClass('toggle-partner-rsvp');
         $('#toggle-partner-diet').toggleClass('toggle-partner-rsvp');
-        if ($('#rsvp-btn').text().includes("Dat ben ik!")){
+        $('#remove-partner-btn').toggleClass('toggle-partner-rsvp');
+        partners--;
+        if (partners > 0){
+            $('#rsvp-btn').html("Dat zijn wij!");
+        } else {
+            $('#rsvp-btn').html("Dat ben ik!");
+        }
+    });
+    $('#remove-partner2-btn').click(function () {
+        $('#toggle-partner2-name').toggleClass('toggle-partner-rsvp');
+        $('#toggle-partner2-diet').toggleClass('toggle-partner-rsvp');
+        $('#remove-partner2-btn').toggleClass('toggle-partner-rsvp');
+        partners--;
+        if (partners > 0){
+            $('#rsvp-btn').html("Dat zijn wij!");
+        } else {
+            $('#rsvp-btn').html("Dat ben ik!");
+        }
+    });
+    $('#remove-partner3-btn').click(function () {
+        $('#toggle-partner3-name').toggleClass('toggle-partner-rsvp');
+        $('#toggle-partner3-diet').toggleClass('toggle-partner-rsvp');
+        $('#remove-partner3-btn').toggleClass('toggle-partner-rsvp');
+        partners--;
+        if (partners > 0){
+            $('#rsvp-btn').html("Dat zijn wij!");
+        } else {
+            $('#rsvp-btn').html("Dat ben ik!");
+        }
+    });
+    $('#remove-partner4-btn').click(function () {
+        $('#toggle-partner4-name').toggleClass('toggle-partner-rsvp');
+        $('#toggle-partner4-diet').toggleClass('toggle-partner-rsvp');
+        $('#remove-partner4-btn').toggleClass('toggle-partner-rsvp');
+        partners--;
+        if (partners > 0){
             $('#rsvp-btn').html("Dat zijn wij!");
         } else {
             $('#rsvp-btn').html("Dat ben ik!");

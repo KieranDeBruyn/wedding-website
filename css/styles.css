@@ -79,6 +79,24 @@ h5 {
     border-color: #3a5c32;
 }
 
+.btn-grey {
+    font-size: 13px;
+    border: solid 1px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    display: inline-block;
+    border-color: #e6e9ea;
+    color: #e6e9ea;
+    background-color: #ffffff;
+}
+
+.btn-grey:focus,
+.btn-grey:hover {
+    color: rgba(28, 54, 83, .6);
+    border-color: rgba(28, 54, 83, .6);
+}
+
 .btn-fill {
     color: #fff;
     border: solid 2px #3a5c32;
