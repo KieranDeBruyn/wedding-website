@@ -100,7 +100,7 @@ $(document).ready(function () {
                 });
                 $('header .navicon').css({
                     "top": "34px",
-                });
+                });  
             } else {
                 $('section.navigation').removeClass('fixed');
                 $('header').css({
@@ -187,7 +187,7 @@ $(document).ready(function () {
             title: "Trouw Kieran en Eva",
 
             // Event start date
-            start: new Date('May 1, 2026 16:00'),
+            start: new Date('May 1, 2026 15:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
@@ -215,7 +215,7 @@ $(document).ready(function () {
             title: "Trouw Kieran en Eva",
 
             // Event start date
-            start: new Date('May 1, 2026 22:00'),
+            start: new Date('May 1, 2026 21:30'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
@@ -238,6 +238,16 @@ $(document).ready(function () {
 
 
     /********************** RSVP **********************/
+    $('#partner-btn').click(function () {
+        $('#toggle-partner-name').toggleClass('toggle-partner-rsvp');
+        $('#toggle-partner-diet').toggleClass('toggle-partner-rsvp');
+        if ($('#rsvp-btn').text().includes("Dat ben ik!")){
+            $('#rsvp-btn').html("Dat zijn wij!");
+        } else {
+            $('#rsvp-btn').html("Dat ben ik!");
+        }
+    });
+
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         var data = $(this).serialize();
@@ -248,7 +258,7 @@ $(document).ready(function () {
             && MD5($('#invite_code').val()) !== 'db52c19cfc7c0e3f2b7b8537577276b8') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbxecAMFHsfMldPyFVuA7T9RHQkmNZ1Gp9xqChM4gCvhLuLAMhYYZQbPaD5dxAbI_Rd-Dg/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbwq7FPHSii4oXVJwFHa61-hLYCCpqvz0tbbWRHKowSTzluhBYSLJRWjpwRNPYfHjU9F/exec', data)
                 .done(function (data) {
                     console.log(data);
                     console.log("success");
