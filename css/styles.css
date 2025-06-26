@@ -380,7 +380,7 @@ section .header {
 
 .nav-toggle {
     position: absolute;
-    top: 0;
+    top: 9px;
     right: 15px;
     z-index: 999999;
     padding: 10px 35px 16px 0;
@@ -459,7 +459,7 @@ section .header {
 }
 
 .hero {
-    min-height: 900px;
+    min-height: 1100px;
     background: url(../img/hero.jpg) center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1084,7 +1084,7 @@ header .member-actions {
     transform: translateY(-50%);
 }
 
-.rsvp .rsvp-form .form-input-group .fa-key,
+.rsvp .rsvp-form .form-input-group i.fa-key,
 .rsvp .rsvp-form .form-input-group i.fa-envelope,
 .rsvp .rsvp-form .form-input-group i.fa-user,
 .rsvp .rsvp-form .form-input-group i.fa-users,
@@ -1168,4 +1168,11 @@ body.modal-open {
 
 .modal-body {
     padding: 25px;
+}
+
+.decal {
+    max-height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+
 }
