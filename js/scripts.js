@@ -318,11 +318,11 @@ $(document).ready(function () {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        $('#alert-wrapper').html(alert_markup('info', '<strong>Even geduld!</strong> We zijn alles aan het opslaan.'));
 
         if (MD5($('#invite_code').val()) !== 'ac5d1e9c42c61563c35537e8009a577c'
             && MD5($('#invite_code').val()) !== 'db52c19cfc7c0e3f2b7b8537577276b8') {
-            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
+            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Je code is incorrect.'));
         } else {
             $.post('https://script.google.com/macros/s/AKfycbz1rglNy5-7RmJAL8-H-Ag2o8c3f6Rul8R6EMNbfFNi4YzPuu18iQamJEYiCp5BQSzI/exec', data)
                 .done(function (data) {
@@ -341,7 +341,7 @@ $(document).ready(function () {
                 .fail(function (data) {
                     console.log(data);
                     console.log("failure");
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Er is een probleem met de server. Ben je verbonden? '));
                 });
         }
     });
