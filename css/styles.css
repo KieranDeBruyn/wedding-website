@@ -45,6 +45,11 @@ h5 {
     font-weight: 500;
 }
 
+h6 {
+    font-style: italic;
+    
+}
+
 .btn {
     font-size: 13px;
     border: solid 2px;
